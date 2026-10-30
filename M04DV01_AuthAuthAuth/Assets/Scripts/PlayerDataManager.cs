@@ -39,7 +39,7 @@ public class PlayerDataManager : MonoBehaviour
             //PlayerName = await UGSTutorialBindings.Han
             Debug.Log($"Saved new player name in the cloud: {PlayerName}");
         }
-        catch(Exception ex)
+        catch(CloudCodeException ex)
         {
             Debug.LogException(ex);
         }
