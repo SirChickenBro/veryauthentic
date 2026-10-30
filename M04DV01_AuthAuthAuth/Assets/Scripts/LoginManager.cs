@@ -1,11 +1,15 @@
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Events;
 using Unity.Services.Core;
 using Unity.Services.Authentication;
 using Unity.Services.Authentication.PlayerAccounts;
+using System.Collections.Generic;
+using System;
 
 public class LoginManager : MonoBehaviour
 {
+    public Action PlayerSignedIn;
 
     private async void Awake()
     {
@@ -42,6 +46,8 @@ public class LoginManager : MonoBehaviour
             Debug.Log("Sign in anonymously succeeded!");
 
             Debug.Log($"PlayerID: { AuthenticationService.Instance.PlayerId}");
+            
+            PlayerSignedIn.Invoke();
         }
         catch(AuthenticationException ex)
         {
@@ -80,6 +86,7 @@ public class LoginManager : MonoBehaviour
             {
                 await AuthenticationService.Instance.SignInWithUnityAsync(PlayerAccountService.Instance.AccessToken);
                 Debug.Log("Succesfully signed up with Unity Player Account");
+                PlayerSignedIn.Invoke();
                 return;
             }
 
@@ -88,6 +95,7 @@ public class LoginManager : MonoBehaviour
                 Debug.Log("Linking anonymous account to Unity...");
                 await LinkWithUnityAsync(PlayerAccountService.Instance.AccessToken);
                 Debug.Log("Successfully linked anonymous account!");
+                PlayerSignedIn.Invoke();
                 return;
             }
 
