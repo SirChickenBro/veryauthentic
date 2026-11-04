@@ -11,14 +11,20 @@ public class LoginManager : MonoBehaviour
 {
     public Action PlayerSignedIn;
 
-    private async void Awake()
+    private void Awake()
     {
-        if(UnityServices.State == ServicesInitializationState.Uninitialized)
+        if (UnityServices.State == ServicesInitializationState.Initialized)
         {
-            Debug.Log("Services Initializing");
-            await UnityServices.InitializeAsync();
+            UnitySignInSubscription();
         }
+        else
+        {
+            UnityServices.Initialized += UnitySignInSubscription;
+        }
+    }
 
+    private void UnitySignInSubscription()
+    {
         PlayerAccountService.Instance.SignedIn += SignInOrLinkWithUnity;
     }
 
@@ -132,5 +138,11 @@ public class LoginManager : MonoBehaviour
     private bool HasUnityID()
     {
         return AuthenticationService.Instance.PlayerInfo.GetUnityId() != null;
+    }
+
+    private void OnDestroy()
+    {
+        PlayerAccountService.Instance.SignedIn -= SignInOrLinkWithUnity;
+        UnityServices.Initialized -= UnitySignInSubscription;
     }
 }

@@ -1,24 +1,25 @@
 using UnityEngine;
+using System.Linq;
 using Unity.Services.CloudCode;
 using Unity.Services.CloudCode.GeneratedBindings;
 
 public class PlayerDataManager : MonoBehaviour
 {
-    public UGSTutorialCloudBindings UGSTutorialBindings;
+    private PlayerDataServiceBindings m_Bindings;
     public LoginManager LoginManager;
     public string PlayerName;
 
     void Start()
     {
         LoginManager.PlayerSignedIn += InitializePlayer;
-        UGSTutorialBindings = new UGSTutorialCloudBindings(CloudCodeService.Instance);
+        m_Bindings = new PlayerDataServiceBindings(CloudCodeService.Instance);
     }
 
     private async void InitializePlayer()
     {
         try
         {
-            var resultFromCloud = await UGSTutorialBindings.SayHello(PlayerName);
+            var resultFromCloud = await m_Bindings.SayHello(PlayerName);
             Debug.Log($"{resultFromCloud}");
         }
         catch(CloudCodeException ex)
@@ -34,14 +35,34 @@ public class PlayerDataManager : MonoBehaviour
 
     public async void SaveNewPlayerName()
     {
+        /*
+        if(!IsPlayerNameValid(PlayerName))
+        {
+            Debug.LogWarning("Name must be 4-16 characters and contain only letters and numbers");
+            return;
+        }
+        */
+
         try
         {
-            //PlayerName = await UGSTutorialBindings.Han
+            PlayerName = await m_Bindings.HandleNewPlayerNameEntry(PlayerName);
             Debug.Log($"Saved new player name in the cloud: {PlayerName}");
         }
         catch(CloudCodeException ex)
         {
+            Debug.LogWarning("Player name invalid");
             Debug.LogException(ex);
         }
+    }
+
+    private bool IsPlayerNameValid(string name)
+    {
+        if (name.Length is < 4 or > 16)
+            return false;
+
+        if (!name.All(c => char.IsLetterOrDigit(c)))
+            return false;
+
+        return true;
     }
 }
