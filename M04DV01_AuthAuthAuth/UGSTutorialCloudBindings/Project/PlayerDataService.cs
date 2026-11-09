@@ -4,14 +4,14 @@ using Microsoft.Extensions.Logging;
 using Unity.Services.CloudCode.Apis;
 using Unity.Services.CloudCode.Core;
 
-namespace HelloWorld;
+namespace UGSTutorialCloudBindings;
 
-public class MyModule
+public class PlayerDataService
 {
     readonly IGameApiClient m_GameApiClient;
-    readonly ILogger<MyModule> m_Logger;
+    readonly ILogger<PlayerDataService> m_Logger;
 
-    public MyModule(IGameApiClient gameApiClient, ILogger<MyModule> logger)
+    public PlayerDataService(IGameApiClient gameApiClient, ILogger<PlayerDataService> logger)
     {
         m_GameApiClient = gameApiClient;
         m_Logger = logger;

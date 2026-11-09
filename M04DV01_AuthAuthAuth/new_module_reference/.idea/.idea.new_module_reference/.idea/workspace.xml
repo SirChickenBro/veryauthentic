@@ -7,30 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98f4d0f2-7923-41d9-a046-cfd40242ccdc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.new_module_reference/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.new_module_reference/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/CloudCode/GeneratedModuleBindings.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/CloudCode/GeneratedModuleBindings.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/CloudCode/GeneratedModuleBindings/Unity.Services.CloudCode.GeneratedBindings.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/CloudCode/GeneratedModuleBindings/Unity.Services.CloudCode.GeneratedBindings.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/CloudCode/GeneratedModuleBindings/Unity.Services.CloudCode.GeneratedBindings.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/CloudCode/GeneratedModuleBindings/Unity.Services.CloudCode.GeneratedBindings.asmdef.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/CloudCode/GeneratedModuleBindings/new_module_reference.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/CloudCode/GeneratedModuleBindings/new_module_reference.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/CloudCode/GeneratedModuleBindings/new_module_reference/PlayerDataServiceBindings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/CloudCode/GeneratedModuleBindings/new_module_reference/PlayerDataServiceBindings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assets/Scripts/PlayerDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assets/Scripts/PlayerDataManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProjectSettings/Packages/com.unity.services.core/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectSettings/Packages/com.unity.services.core/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.new_module_reference/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/ModuleSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project/ModuleSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/PlayerDataService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Properties/PublishProfiles/FolderProfile.pubxml" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Properties/PublishProfiles/FolderProfile.pubxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/bin/Release/net9.0/any/new_module_reference.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project/bin/Release/net9.0/any/new_module_reference.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/bin/Release/net9.0/any/new_module_reference.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Project/bin/Release/net9.0/any/new_module_reference.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/bin/Release/net9.0/linux-x64/new_module_reference.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project/bin/Release/net9.0/linux-x64/new_module_reference.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/bin/Release/net9.0/linux-x64/new_module_reference.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Project/bin/Release/net9.0/linux-x64/new_module_reference.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/UnitTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/UnitTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net9.0/.msCoverageSourceRootsMapping_TestProject" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net9.0/.msCoverageSourceRootsMapping_TestProject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/bin/Debug/net9.0/CoverletSourceRootsMapping_TestProject" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/bin/Debug/net9.0/CoverletSourceRootsMapping_TestProject" afterDir="false" />
-    </list>
+    <list default="true" id="80bc0acb-0f4e-42b5-9934-f66c2785fe37" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,68 +16,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
-  <component name="ProjectId" id="3LsZcSrbxqGKKv3CboJU4WVsxb6" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "mosharaf/fix-sln-generation-issue",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+    "git-widget-placeholder": "main",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="new_module_reference: FolderProfile" type="DotNetMsBuildPublish" factoryName="Publish to IIS">
-      <riderPublish publish_profile="FolderProfile.pubxml" pubxml_path="$PROJECT_DIR$/Project/Properties/PublishProfiles/FolderProfile.pubxml" uuid_high="-8473769033462037773" uuid_low="-7754124802826029297" />
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="98f4d0f2-7923-41d9-a046-cfd40242ccdc" name="Changes" comment="" />
-      <created>1794244814514</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1794244814514</updated>
-      <workItem from="1794244815662" duration="1491000" />
-    </task>
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
-  <component name="VcsManagerConfiguration">
-    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
-          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
-          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
-          <option name="timeStamp" value="2" />
-        </breakpoint>
-        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
-          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
-          <option name="timeStamp" value="3" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
 </project>
