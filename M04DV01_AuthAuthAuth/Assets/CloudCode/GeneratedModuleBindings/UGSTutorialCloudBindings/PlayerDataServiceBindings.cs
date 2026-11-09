@@ -5,13 +5,13 @@ using System;
 
 namespace Unity.Services.CloudCode.GeneratedBindings
 {
-    public class PlayerDataServiceBindings
+    public class MyModuleBindings
     {
         readonly ICloudCodeService k_Service;
 
-        public PlayerDataServiceBindings() : this(CloudCodeService.Instance) { }
+        public MyModuleBindings() : this(CloudCodeService.Instance) { }
 
-        public PlayerDataServiceBindings(ICloudCodeService service)
+        public MyModuleBindings(ICloudCodeService service)
         {
             k_Service = service;
         }
@@ -47,5 +47,19 @@ namespace Unity.Services.CloudCode.GeneratedBindings
                 {
                 });
         }
+<<<<<<<< Updated upstream:M04DV01_AuthAuthAuth/Assets/CloudCode/GeneratedModuleBindings/UGSTutorialCloudBindings/PlayerDataServiceBindings.cs
+========
+
+        public async Task<string> HandleNewPlayerNameEntry(string newName)
+        {
+            return await k_Service.CallModuleEndpointAsync<string>(
+                "new_module_reference",
+                "HandleNewPlayerNameEntry",
+                new Dictionary<string, object>()
+                {
+                    {"newName", newName},
+                });
+        }
+>>>>>>>> Stashed changes:M04DV01_AuthAuthAuth/Assets/CloudCode/GeneratedModuleBindings/UGSTutorialCloudBindings/MyModuleBindings.cs
     }
 }

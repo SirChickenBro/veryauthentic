@@ -5,14 +5,14 @@ using Unity.Services.CloudCode.GeneratedBindings;
 
 public class PlayerDataManager : MonoBehaviour
 {
-    private PlayerDataServiceBindings m_Bindings;
+    private MyModuleBindings m_Bindings;
     public LoginManager LoginManager;
     public string PlayerName;
 
     void Start()
     {
         LoginManager.PlayerSignedIn += InitializePlayer;
-        m_Bindings = new PlayerDataServiceBindings(CloudCodeService.Instance);
+        m_Bindings = new MyModuleBindings(CloudCodeService.Instance);
     }
 
     private async void InitializePlayer()
@@ -35,14 +35,6 @@ public class PlayerDataManager : MonoBehaviour
 
     public async void SaveNewPlayerName()
     {
-        /*
-        if(!IsPlayerNameValid(PlayerName))
-        {
-            Debug.LogWarning("Name must be 4-16 characters and contain only letters and numbers");
-            return;
-        }
-        */
-
         try
         {
             PlayerName = await m_Bindings.HandleNewPlayerNameEntry(PlayerName);
