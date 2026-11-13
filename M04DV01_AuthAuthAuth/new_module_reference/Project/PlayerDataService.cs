@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 using Unity.Services.CloudCode.Apis;
 using Unity.Services.CloudCode.Core;
 
-namespace HelloWorld;
+namespace UGSTutorialCloud;
 
 public class PlayerDataService
 {
@@ -30,9 +30,22 @@ public class PlayerDataService
     }
     
     [CloudCodeFunction("HandleNewPlayerNameEntry")]
-    public string HandleNewPlayerNameEntry(string name)
+    public string HandleNewPlayerNameEntry(string newName)
     {
-        return name;
+        if (IsPlayerNameValid(newName))
+        {
+            return newName;
+        }
+        throw new ArgumentException("Name is not valid");
+    }
+
+    private bool IsPlayerNameValid(string name)
+    {
+        if(name.Length is < 4 or > 16)
+        {
+            return false;
+        }
+        return true;
     }
 }
 

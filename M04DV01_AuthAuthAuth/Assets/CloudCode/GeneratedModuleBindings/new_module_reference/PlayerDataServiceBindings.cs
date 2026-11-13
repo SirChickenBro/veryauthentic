@@ -37,14 +37,14 @@ namespace Unity.Services.CloudCode.GeneratedBindings
                 });
         }
 
-        public async Task<string> HandleNewPlayerNameEntry(string name)
+        public async Task<string> HandleNewPlayerNameEntry(string newName)
         {
             return await k_Service.CallModuleEndpointAsync<string>(
                 "new_module_reference",
                 "HandleNewPlayerNameEntry",
                 new Dictionary<string, object>()
                 {
-                    {"name", name},
+                    {"newName", newName},
                 });
         }
     }
