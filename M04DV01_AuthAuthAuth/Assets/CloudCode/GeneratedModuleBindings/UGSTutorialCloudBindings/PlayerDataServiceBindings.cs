@@ -36,5 +36,16 @@ namespace Unity.Services.CloudCode.GeneratedBindings
                 {
                 });
         }
+
+        public async Task<string> HandleNewPlayerNameEntry(string newName)
+        {
+            return await k_Service.CallModuleEndpointAsync<string>(
+                "UGSTutorialCloudBindings",
+                "HandleNewPlayerNameEntry",
+                new Dictionary<string, object>()
+                {
+                    {"newName", newName},
+                });
+        }
     }
 }

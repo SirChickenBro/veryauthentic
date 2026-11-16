@@ -1,12 +1,11 @@
-using Unity.Services.CloudCode.Apis.Extensions;
+using Microsoft.Extensions.DependencyInjection;
+using Unity.Services.CloudCode.Apis;
 using Unity.Services.CloudCode.Core;
 
-namespace HelloWorld;
-
-public class ModuleSetup : ICloudCodeSetup
+public class ModuleConfig : ICloudCodeSetup
 {
     public void Setup(ICloudCodeConfig config)
     {
-        config.AddGameApiClient();
+        config.Dependencies.AddSingleton(GameApiClient.Create());
     }
 }

@@ -8,33 +8,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a0cda8c-e5ed-4c44-8d92-fe795c254227" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../UGSTutorialBindings/Project/Example.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UGSTutorialBindings/Project/ModuleSetup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UGSTutorialBindings/Project/Properties/PublishProfiles/FolderProfile.pubxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UGSTutorialBindings/Project/bin/Release/net9.0/any/new_module_reference.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UGSTutorialBindings/Project/bin/Release/net9.0/any/new_module_reference.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UGSTutorialBindings/Project/bin/Release/net9.0/linux-x64/new_module_reference.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UGSTutorialBindings/Project/bin/Release/net9.0/linux-x64/new_module_reference.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UGSTutorialBindings/TestProject/UnitTest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UGSTutorialBindings/TestProject/bin/Debug/net9.0/.msCoverageSourceRootsMapping_TestProject" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UGSTutorialBindings/TestProject/bin/Debug/net9.0/CoverletSourceRootsMapping_TestProject" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UGSTutorialBindings/UpgradeLog.htm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UGSTutorialCloudBindings/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/ModuleConfig.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/CloudCode.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/CloudCode/GeneratedModuleBindings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/CloudCode/GeneratedModuleBindings/UGSTutorialCloudBindings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/CloudCode/GeneratedModuleBindings/UGSTutorialCloudBindings/PlayerDataServiceBindings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/CloudCode/GeneratedModuleBindings/UGSTutorialCloudBindings/PlayerDataServiceBindings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/CloudCode/GeneratedModuleBindings/Unity.Services.CloudCode.GeneratedBindings.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assets/CloudCode/GeneratedModuleBindings/Unity.Services.CloudCode.GeneratedBindings.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UGSTutorialCloudBindings/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UGSTutorialCloudBindings/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project/ModuleSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project/ModuleSetup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project/PlayerDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project/PlayerDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/Properties/PublishProfiles/FolderProfile.pubxml" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Properties/PublishProfiles/FolderProfile.pubxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/bin/Release/net9.0/any/UGSTutorialCloudBindings.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project/bin/Release/net9.0/any/UGSTutorialCloudBindings.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/bin/Release/net9.0/any/UGSTutorialCloudBindings.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Project/bin/Release/net9.0/any/UGSTutorialCloudBindings.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/bin/Release/net9.0/linux-x64/UGSTutorialCloudBindings.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/bin/Release/net9.0/linux-x64/UGSTutorialCloudBindings.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject/UnitTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject/UnitTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../new_module_reference/.idea/.idea.new_module_reference/.idea/projectSettingsUpdater.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../new_module_reference/.idea/.idea.new_module_reference/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../new_module_reference/Project/bin/Release/net9.0/any/new_module_reference.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../new_module_reference/Project/bin/Release/net9.0/linux-x64/new_module_reference.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../new_module_reference/TestProject/bin/Debug/net9.0/.msCoverageSourceRootsMapping_TestProject" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../new_module_reference/TestProject/bin/Debug/net9.0/CoverletSourceRootsMapping_TestProject" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1794850156153</updated>
       <workItem from="1794850157803" duration="39000" />
-      <workItem from="1794850317599" duration="365000" />
+      <workItem from="1794850317599" duration="897000" />
     </task>
     <servers />
   </component>
