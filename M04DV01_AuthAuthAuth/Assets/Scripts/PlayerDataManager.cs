@@ -1,18 +1,20 @@
 using UnityEngine;
 using System.Linq;
 using Unity.Services.CloudCode;
+using Unity.Services.Core;
+using Unity.Services.Authentication;
 using Unity.Services.CloudCode.GeneratedBindings;
 
 public class PlayerDataManager : MonoBehaviour
 {
-    private MyModuleBindings m_Bindings;
+    private PlayerDataServiceBindings m_Bindings;
     public LoginManager LoginManager;
     public string PlayerName;
 
     void Start()
     {
         LoginManager.PlayerSignedIn += InitializePlayer;
-        m_Bindings = new MyModuleBindings(CloudCodeService.Instance);
+        m_Bindings = new PlayerDataServiceBindings(CloudCodeService.Instance);
     }
 
     private async void InitializePlayer()
