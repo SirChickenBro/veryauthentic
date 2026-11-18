@@ -1,4 +1,4 @@
-using HelloWorld;
+using UnityGamingServicesCloud;
 
 namespace TestProject;
 

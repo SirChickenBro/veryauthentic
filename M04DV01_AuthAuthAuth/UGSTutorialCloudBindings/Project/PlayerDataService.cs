@@ -9,32 +9,34 @@ using Unity.Services.CloudCode.Core;
 using Unity.Services.CloudCode.Shared;
 using Unity.Services.CloudSave.Model;
 
-namespace UGSTutorialCloudBindings;
+namespace UnityGamingServicesCloud;
 
 public class PlayerDataService
 {
-    public const string k_PlayerNameKey = "PLAYER_NAME";
-    
     readonly IGameApiClient m_GameApiClient;
     readonly ILogger<PlayerDataService> m_Logger;
-
     private readonly ILogger<PlayerDataService> _logger;
-
-    public PlayerDataService(ILogger<PlayerDataService> logger)
+    
+    public const string k_PlayerNameKey = "PLAYER_NAME";
+    
+    public PlayerDataService(IGameApiClient gameApiClient, ILogger<PlayerDataService> logger)
     {
-        _logger = logger;
+        m_GameApiClient = gameApiClient;
+        m_Logger = logger;
     }
+
+    
     private async Task SavePlayerData(IExecutionContext context, IGameApiClient gameApiClient, string key, string value)
     {
         try
         {
             await gameApiClient.CloudSaveData.SetItemAsync(
-                context,
-                context.AccessToken!,
+                context, 
+                context.AccessToken!, 
                 context.ProjectId!,
-                context.PlayerId!,
+                context.PlayerId!, 
                 new SetItemBody(key, value));
-
+                
             _logger.LogInformation("Successfully saved data for key: {Key}", key);
         }
         catch (ApiException ex)
@@ -43,17 +45,19 @@ public class PlayerDataService
             throw new Exception($"Unable to save player data: {ex.Message}");
         }
     }
+    
+    
     private async Task<string> GetPlayerData(IExecutionContext context, IGameApiClient gameApiClient, string key)
     {
         try
         {
             var result = await gameApiClient.CloudSaveData.GetItemsAsync(
-                context,
+                context, 
                 context.AccessToken!,
-                context.ProjectId!,
-                context.PlayerId!,
+                context.ProjectId!, 
+                context.PlayerId!, 
                 new List<string> { key });
-
+                
             var data = result.Data.Results.FirstOrDefault()?.Value?.ToString() ?? string.Empty;
             _logger.LogInformation("Successfully retrieved data for key: {Key}", key);
             return data;
@@ -63,13 +67,6 @@ public class PlayerDataService
             _logger.LogError("Failed to retrieve data for key {Key}. Error: {Error}", key, ex.Message);
             throw new Exception($"Unable to retrieve player data: {ex.Message}");
         }
-    }
-    
-    
-    public PlayerDataService(IGameApiClient gameApiClient, ILogger<PlayerDataService> logger)
-    {
-        m_GameApiClient = gameApiClient;
-        m_Logger = logger;
     }
 
     [CloudCodeFunction("SayHello")]
@@ -85,31 +82,25 @@ public class PlayerDataService
     }
     
     [CloudCodeFunction("HandleNewPlayerNameEntry")]
-    public async Task<string> HandleNewPlayerNameEntry(IExecutionContext context, IGameApiClient gameApiClient, string newName)
+    public string HandleNewPlayerNameEntry(IExecutionContext context, IGameApiClient gameApiClient, string newPlayerName)
     {
-        if (IsPlayerNameValid(newName))
+        if (IsPlayerNameValid(newPlayerName))
         {
-            await SavePlayerData(context, gameApiClient, k_PlayerNameKey, newName);
-            return newName ;
+            SavePlayerData(context, gameApiClient, k_PlayerNameKey, newPlayerName);
+            return newPlayerName;
         }
-
-        throw new ArgumentException("Name is not valid");
+        
+        throw new ArgumentException($"Invalid player name: {newPlayerName}");
     }
 
-    private bool IsPlayerNameValid(string name)
-    {
-        if (name.Length is < 4 or > 16)
-        {
-            return false ;
-        }
 
-        if(!name.All(c=> char.IsLetterOrDigit(c)))
+    private bool IsPlayerNameValid(string playerName)
+    {
+        if (playerName.Length < 4 || playerName.Length > 16)
         {
-            return false ;
+            return false;
         }
 
         return true;
     }
 }
-
-
